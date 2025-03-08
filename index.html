@@ -1,60 +1,52 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-  <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="PSPad editor, www.pspad.com">
-  </head>
-  <body>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="generator" content="PSPad editor, www.pspad.com">
     <title>MELNIKOV.A</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
-        <div class="container">
-            <div class="row">
-                <div class="col-12"> 
-                    <h1>Информация обо мне</h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-8">
-                    <br>Я Мельников Антон Николаевич.
-                    <br>Я заканчиваю второй курс Информационного безопасника.
-                    <br>Родом я из небольшого пгт Зарубино, и я хочу доказать жителям Зарубино,
-                    <br>что можно получить хорошее образование, но нужно это захотеть!
-                    <br>Но в первую очередь, конечно дже я хочу получить хорошее образование,
-                    <br>чтобы обеспечить в будущем себя и свою семью!
-                    </h2>
-                </div>
-                    <div class="col-4"> 
-                    <img class="img_size" src="img/me.jpg">
-                        Мельников Антон Николаевич
-                    </div>
-            </div>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>Информация обо мне</h1>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="button_js col-12">
-                    <button id="myButton" onclick="toggleImage()">Click me</button>
-                    <div id="imageContainer"></div>
-                    <script>
-                        var imageAdded = false;
-                        function toggleImage() {
-                            var container = document.getElementById('imageContainer');
-                            if (imageAdded) {
-                                container.innerHTML = '';
-                                imageAdded = false;
-                            } else {
-                                var img = document.createElement('img');
-                                img.src = 'img/kit.jpg'; // Замените на путь к вашему изображению
-                                img.alt = 'Описание изображения'; // Замените на описание изображения
-                                container.appendChild(img);
-                                imageAdded = true;
-                            }
-                        }
-                        </script>
-                </div>
-            </div>
+    </div>
+    <div class="row">
+        <div class="col-8">
+            <br>Я Мельников Антон Николаевич.
+            <br>Я заканчиваю второй курс Информационного безопасника.
+            <br>Родом я из небольшого пгт Зарубино, и я хочу доказать жителям Зарубино,
+            <br>что можно получить хорошее образование, но нужно это захотеть!
+            <br>Но в первую очередь, конечно дже я хочу получить хорошее образование,
+            <br>чтобы обеспечить в будущем себя и свою семью!
         </div>
-  </body>
+        <div class="col-4">
+            <img class="img_size" src="img/me.jpg" alt="Мельников Антон Николаевич">
+            Мельников Антон Николаевич
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="button_js col-12">
+            <button id="myButton" onclick="toggleImage()">Click me</button>
+            <script>
+                function toggleImage() {
+                    var img = document.querySelector('.img_size'); // Находим изображение по классу
+                    if (img.src.includes('img/me.jpg')) { // Проверяем, является ли текущее изображение img/me.jpg
+                        img.src = 'img/kit.jpg'; // Меняем на img/kit.jpg
+                    } else {
+                        img.src = 'img/me.jpg'; // Возвращаем исходное изображение
+                    }
+                }
+            </script>
+        </div>
+    </div>
+</div>
+</body>
 </html>

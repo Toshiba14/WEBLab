@@ -1,5 +1,6 @@
 body {
-    background-color: #29bda9;
+    background-image: url(../img/gradient-backgroundd.jpg);
+    background-size: cover;
     font-family: 'Courier New', Courier, monospace;
 }
 /* .container {
@@ -7,19 +8,21 @@ body {
 .row {
 } */
 .col-12 {
-    color: #635327;
+    color: #2b0440;
     text-align: center;
     text-shadow: 2px 2px 4px gray;
 }
 .col-8 {
-    color: #5f6903;
+    color: #2b0440;
     border: 4px dashed rgb(1, 29, 88);
     text-align: center;
+    background-image: url(../img/kotik.jpg);
+    background-size: cover;
     border-right: 0px;
     text-shadow: 1px 1px 2px gray;
 }
 .col-4 {
-    color: #5f6903;
+    color: #2b0440;
     border: 4px dashed rgb(1, 29, 88);
     text-align: center;
     text-shadow: 1px 1px 2px gray;  
@@ -30,11 +33,26 @@ body {
     background-size: 50%;
 }
 #myButton {
-    border: none;
-    border-radius: 15px;
-    width: 100px;
-    height: 30px;
-    background-color: #06eeff;
-    color:#860202;
-    font-weight: bold;
+    background-color: #4CAF50; /* Зеленый фон */
+    color: white; /* Белый текст */
+    border: none; /* Без границы */
+    padding: 10px 20px; /* Отступы */
+    text-align: center; /* Выравнивание текста */
+    text-decoration: none; /* Без подчеркивания */
+    display: inline-block; /* Инлайн-блок */
+    font-size: 16px; /* Размер шрифта */
+    margin: 4px 2px; /* Отступы */
+    cursor: pointer; /* Указатель при наведении */
+    border-radius: 5px; /* Закругленные углы */
+    transition: transform 0.2s ease; /* Плавный переход для анимации */
+}
+
+/* Анимация при наведении и нажатии */
+#myButton:active {
+    background-color: #388E3C;
+    transform: scale(0.95); /* Уменьшаем кнопку при нажатии */
+}
+
+#myButton:hover {
+    transform: scale(1.05); /* Увеличиваем кнопку при наведении */
 }
